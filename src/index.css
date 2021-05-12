@@ -12,12 +12,14 @@ code {
     monospace;
 }
 
+/* SEARCH */
+
 .results {
   display: flex;
   flex-wrap: wrap;
   width: 50%;
   margin: 50px auto;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .restaurant {

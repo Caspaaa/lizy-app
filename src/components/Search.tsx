@@ -5,7 +5,7 @@ interface Props {}
 export const Search: React.FunctionComponent = (props: any) => {
   const [search, setSearch] = React.useState({
     location: "50.826587, 4.37309",
-    radius: 900,
+    radius: 200,
     priceRange: {
       min: 0,
       max: 3,
