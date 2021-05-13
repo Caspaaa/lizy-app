@@ -37,6 +37,7 @@ interface YelpItem {
 }
 
 interface Restaurant {
+  image: string;
   id: string;
   name: string;
   address: string;
