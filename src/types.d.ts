@@ -1,37 +1,46 @@
-interface Photo {
-  height: number;
-  html_attribution: string[];
-  photo_reference: string[];
-  width: number;
+interface YelpItemCategory {
+  alias: string;
+  title: string;
 }
 
-interface Location {
-  lat: number;
-  lng: number;
+interface YelpItemLocation {
+  address1: string;
+  address2: string;
+  address3: string;
+  city: string;
+  zip_code: string;
+  country: string;
+  state: string;
+  display_address: string[];
 }
 
-interface GooglePlacesItem {
-  business_status: string;
-  geometry: {
-    location: Location;
-    viewport: { northeast: Location; southwest: Location };
-  };
-  icon: string;
+interface YelpItem {
+  id: string;
+  alias: string;
   name: string;
-  photos: Photo[];
-  place_id: string;
-  plus_code: { compound_code: string; global_code: string };
-  price_level: number;
+  image_url: string;
+  is_closed: boolean;
+  url: string;
+  review_count: number;
+  categories: YelpItemCategory[];
   rating: number;
-  reference: string;
-  scope: string;
-  types: string[];
-  user_ratings_total: number;
-  vicinity: string;
+  coordinates: {
+    latitude: number;
+    longitude: number;
+  };
+  transactions: number[];
+  price: 1 | 2 | 3 | 4;
+  location: YelpItemLocation;
+  phone: string;
+  display_phone: string;
+  distance: number;
 }
 
 interface Restaurant {
+  id: string;
   name: string;
   address: string;
+  cuisine: string;
+  price: 1 | 2 | 3 | 4;
   rating: number;
 }

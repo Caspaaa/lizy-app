@@ -1,24 +1,15 @@
 import * as React from "react";
+import { PriceRange } from "./PriceRange";
+import { Restaurants } from "./Restaurants";
 
-interface Props {}
-
-export const Search: React.FunctionComponent = (props: any) => {
+export const Search: React.FunctionComponent = () => {
   const [search, setSearch] = React.useState({
-    location: "50.826587, 4.37309",
+    location: "50.826587,4.37309",
     radius: 200,
-    priceRange: {
-      min: 0,
-      max: 3,
-    },
+    priceRange: [1],
   });
 
-  const [results, setResults] = React.useState([
-    {
-      name: "",
-      address: "",
-      rating: 0,
-    },
-  ]);
+  const [restaurants, setRestaurants] = React.useState<Restaurant[]>([]);
 
   const handleInputChange = (event: any) => {
     const { value, name } = event.target;
@@ -26,6 +17,13 @@ export const Search: React.FunctionComponent = (props: any) => {
     setSearch({
       ...search,
       [name]: value,
+    });
+  };
+
+  const updatePriceRange = (newPriceRange: number[]) => {
+    setSearch({
+      ...search,
+      priceRange: newPriceRange,
     });
   };
 
@@ -41,19 +39,8 @@ export const Search: React.FunctionComponent = (props: any) => {
         },
       });
       const responseJSON = await response.json();
-      const googlePlacesResults: GooglePlacesItem[] = responseJSON.results;
-
-      const restaurants: Restaurant[] = googlePlacesResults.map(
-        (place: GooglePlacesItem) => {
-          return {
-            name: place.name,
-            address: place.vicinity,
-            rating: place.rating,
-          };
-        }
-      );
-
-      setResults(restaurants);
+      console.log("responseJSON", responseJSON);
+      setRestaurants(responseJSON);
     } catch (error) {
       console.error(error);
       alert("Error searching please try again");
@@ -82,37 +69,16 @@ export const Search: React.FunctionComponent = (props: any) => {
               onChange={handleInputChange}
               required
             />
-            <label>Min price : </label>
-            <input
-              type="text"
-              name="min price"
-              value={search.priceRange.min}
-              onChange={handleInputChange}
-              required
-            />
-            <label>Max price : </label>
-            <input
-              type="text"
-              name="max price"
-              value={search.priceRange.max}
-              onChange={handleInputChange}
-              required
+
+            <PriceRange
+              priceRange={search.priceRange}
+              updatePriceRange={updatePriceRange}
             />
             <input type="submit" value="Search" />
           </form>
         </div>
       </div>
-      <div className="results">
-        {results.map((place: Restaurant) => {
-          return (
-            <div className="restaurant">
-              <p>{place.name}</p>
-              <p>{place.address}</p>
-              <p>{place.rating}/5</p>
-            </div>
-          );
-        })}
-      </div>
+      <Restaurants restaurants={restaurants} />
     </div>
   );
 };
