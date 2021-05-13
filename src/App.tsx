@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Search } from "./components/Search";
+import { Places } from "./components/Places";
 import { Login } from "./components/Login";
 import { WithAuth } from "./components/WithAuth";
 
@@ -16,7 +16,7 @@ function App() {
             </Route>
             <Route path="/places" exact>
               <WithAuth>
-                <Search />
+                <Places />
               </WithAuth>
             </Route>
           </Switch>

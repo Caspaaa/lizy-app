@@ -44,3 +44,16 @@ interface Restaurant {
   price: 1 | 2 | 3 | 4;
   rating: number;
 }
+
+interface SearchInterface {
+  location: string;
+  radius: number;
+  priceRange: number[];
+}
+
+interface Props {
+  search: SearchInterface;
+  handleInputChange: React.ChangeEventHandler;
+  onSubmit: React.FormEventHandler;
+  updatePriceRange: Function;
+}
