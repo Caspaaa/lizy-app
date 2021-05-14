@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="qover">
+        <div className="lizy">
           <Switch>
             <Route path="/" exact>
               <Login />

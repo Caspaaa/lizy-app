@@ -225,21 +225,32 @@ code {
 body {
   font-family: "Proxima Soft";
 }
+
+.lizy {
+  width: 1200px;
+  margin: auto;
+}
+
 .results {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  width: 100%;
   margin: 50px auto auto;
   justify-content: flex-start;
 }
 
 .restaurant {
-  border: 1px solid #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  border: 1px solid #e9e9e9;
   border-radius: 5px;
   margin: 10px;
-  width: calc(33.33% - 20px);
+  width: calc(25% - 20px);
   box-sizing: border-box;
-  max-height: 400px;
+  font-weight: 500;
+  align-items: flex-start;
+  transition: 0.3s;
 }
 
 label {
@@ -255,7 +266,7 @@ img {
   max-height: 100%;
 }
 
-.restaurant__img {
+.restaurant-img-wrapper {
   display: flex;
   overflow: hidden;
   justify-content: center;
@@ -263,7 +274,7 @@ img {
   height: 150px;
 }
 
-.restaurant__img img {
+.restaurant-img {
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -271,6 +282,130 @@ img {
 
 .shadow {
   border-radius: 8px;
-  border: 0.1rem solid rgb(236, 236, 238);
   box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px;
+}
+
+img.rating__star {
+  height: 15px;
+}
+
+.restaurant__extras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: auto auto 10px;
+  opacity: 0.8;
+}
+
+.restaurant-extras-rating {
+  display: flex;
+  align-items: center;
+}
+
+img.icon {
+  height: 20px;
+}
+
+.restaurant-desc-item {
+  display: flex;
+  margin: 5px auto;
+  width: 100%;
+  align-items: center;
+  text-align: left;
+}
+
+.restaurant__desc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.restaurant-icon {
+  margin: 0 15px 0 0;
+}
+
+.restaurant-address__content {
+  text-align: left;
+}
+
+.restaurant-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.restaurant-name__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  background: -webkit-linear-gradient(right, #f0057e, #fd320c);
+  border-radius: 4px 0 0 4px;
+}
+
+.restaurant-name__text {
+  font-weight: bold;
+  background: -webkit-linear-gradient(right, #f0057e, #fd320c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  padding: 0 10px;
+  font-size: 1.1em;
+}
+
+.font-weight--thin {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.restaurant-extras-rating__count {
+  margin: 0 0 2px 5px;
+}
+
+.restaurant-extras-price {
+  font-weight: 600;
+  color: #bbbbbb;
+  font-size: 1.2em;
+}
+
+.restaurant:hover {
+  transform: translateY(-5px);
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .lizy {
+    width: 800px;
+  }
+  .restaurant {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 799px) {
+  .lizy {
+    width: 100%;
+  }
+  .restaurant {
+    width: calc(50% - 20px);
+  }
+}
+
+@media only screen and (max-width: 449px) {
+  .lizy {
+    width: 100%;
+  }
+  .restaurant {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+  }
 }

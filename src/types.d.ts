@@ -43,6 +43,7 @@ interface Restaurant {
   address: string[];
   distance: number;
   cuisine: string[];
+  phone: string;
   price: 1 | 2 | 3 | 4;
   rating: number;
   rating_count: number;

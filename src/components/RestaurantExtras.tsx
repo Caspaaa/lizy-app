@@ -33,11 +33,13 @@ export const RestaurantExtras: React.FunctionComponent<Props> = ({
 }) => {
   return (
     <div className="restaurant__extras">
-      <div className="restaurant__rating">
+      <div className="restaurant-extras-rating">
         <div>{parse(formatRating(rating))}</div>
-        <div>({rating_count})</div>
+        <div className="restaurant-extras-rating__count font-weight--thin">
+          ({rating_count})
+        </div>
       </div>
-      <div>{price}</div>
+      <div className="restaurant-extras-price">{price}</div>
     </div>
   );
 };
