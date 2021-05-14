@@ -31,7 +31,8 @@ export const Places: React.FunctionComponent = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/search`, {
+      // const response = await fetch(`${process.env.REACT_APP_API_URL}/search`, {
+      const response = await fetch(`http://localhost:8000/api/search`, {
         method: "POST",
         body: JSON.stringify(search),
         headers: {

@@ -40,10 +40,12 @@ interface Restaurant {
   image: string;
   id: string;
   name: string;
-  address: string;
-  cuisine: string;
+  address: string[];
+  distance: number;
+  cuisine: string[];
   price: 1 | 2 | 3 | 4;
   rating: number;
+  rating_count: number;
 }
 
 interface SearchInterface {
