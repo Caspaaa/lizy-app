@@ -24,13 +24,16 @@ export const Login: React.FunctionComponent<Props> = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/api/getToken", {
-        method: "POST",
-        body: JSON.stringify(user),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/getToken`,
+        {
+          method: "POST",
+          body: JSON.stringify(user),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       const responseJSON = await response.json();
 

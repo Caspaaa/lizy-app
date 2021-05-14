@@ -1,5 +1,4 @@
 import * as React from "react";
-import { PriceRange } from "./PriceRange";
 import { Restaurants } from "./Restaurants";
 import { Search } from "./Search";
 
@@ -32,7 +31,7 @@ export const Places: React.FunctionComponent = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/api/search", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/search`, {
         method: "POST",
         body: JSON.stringify(search),
         headers: {
