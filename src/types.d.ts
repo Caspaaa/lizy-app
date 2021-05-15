@@ -52,7 +52,7 @@ interface Restaurant {
 interface SearchInterface {
   location: string;
   radius: number;
-  priceRange: number[];
+  priceRange: number;
 }
 
 interface Props {

@@ -6,7 +6,7 @@ export const Places: React.FunctionComponent = () => {
   const [search, setSearch] = React.useState({
     location: "50.826587,4.37309",
     radius: 200,
-    priceRange: [1],
+    priceRange: 1,
   });
 
   const [restaurants, setRestaurants] = React.useState<Restaurant[]>([]);
@@ -20,7 +20,7 @@ export const Places: React.FunctionComponent = () => {
     });
   };
 
-  const updatePriceRange = (newPriceRange: number[]) => {
+  const updatePriceRange = (newPriceRange: number) => {
     setSearch({
       ...search,
       priceRange: newPriceRange,

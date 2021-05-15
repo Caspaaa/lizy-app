@@ -1,21 +1,18 @@
 import * as React from "react";
 
 interface Props {
-  isActive: boolean;
+  priceRange: number;
   value: 1 | 2 | 3 | 4;
   handlePriceRangeChange: Function;
 }
 
 export const PriceRangeButton: React.FunctionComponent<Props> = ({
-  isActive,
+  priceRange,
   value,
   handlePriceRangeChange,
 }) => {
-  const [active, setActive] = React.useState(isActive);
-
   const toggleActive = (event: any) => {
     handlePriceRangeChange(event);
-    setActive((previous) => !previous);
   };
 
   return (
@@ -24,7 +21,7 @@ export const PriceRangeButton: React.FunctionComponent<Props> = ({
       value={value}
       onClick={toggleActive}
       className={
-        active
+        priceRange >= value
           ? "price-range-button price-range-button--active"
           : "price-range-button"
       }
