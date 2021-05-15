@@ -6,7 +6,7 @@ interface Props {
   updateCoords: Function;
 }
 
-const SearchAddress: React.FunctionComponent<Props> = ({ updateCoords }) => {
+const FilterAddress: React.FunctionComponent<Props> = ({ updateCoords }) => {
   const getPlaceId = (place: any) => {
     geocodeByPlaceId(place.value.place_id)
       .then((results) => getLatLng(results[0]))
@@ -31,4 +31,4 @@ const SearchAddress: React.FunctionComponent<Props> = ({ updateCoords }) => {
   );
 };
 
-export default SearchAddress;
+export default FilterAddress;

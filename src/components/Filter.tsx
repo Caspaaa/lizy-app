@@ -1,8 +1,8 @@
 import * as React from "react";
-import SearchAddress from "./SearchAddress";
+import SearchAddress from "./FilterAddress";
 import { Header } from "./Header";
 import { PriceRange } from "./PriceRange";
-import { SearchParticipants } from "./SearchParticipants";
+import { FilterParticipants } from "./FilterParticipants";
 
 interface SearchInterface {
   location: string;
@@ -19,7 +19,7 @@ interface Props {
   isBoxed: boolean;
 }
 
-export const Search: React.FunctionComponent<Props> = ({
+export const Filter: React.FunctionComponent<Props> = ({
   search,
   handleInputChange,
   onSubmit,
@@ -33,16 +33,18 @@ export const Search: React.FunctionComponent<Props> = ({
       <form className="form-search" onSubmit={onSubmit}>
         <div className="form-search__inputs">
           <SearchAddress updateCoords={updateCoords} />
-          <input
+          <select
             className="input-text"
-            type="text"
-            name="radius"
             placeholder="Rayon"
-            value={search.radius}
             onChange={handleInputChange}
-            required
-          />
-          <SearchParticipants />
+            name="radius"
+          >
+            <option value="500">500 m</option>
+            <option value="1000">1 km</option>
+            <option value="5000">5 km</option>
+            <option value="10000">10 km</option>
+          </select>
+          <FilterParticipants />
 
           <PriceRange
             priceRange={search.priceRange}

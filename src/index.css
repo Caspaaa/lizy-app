@@ -543,7 +543,7 @@ input.input-text:hover,
   background: #fff;
   opacity: 0;
   transition: 0.3s;
-  z-index: -1;
+  z-index: 1;
 }
 
 .participants__name.show-participants {
@@ -567,10 +567,6 @@ input.input-text:hover,
   font-size: 1.2em;
   font-weight: 500;
   color: #bfbfbf;
-}
-
-.input-text[name="radius"] {
-  width: 50px;
 }
 
 @media only screen and (max-width: 799px) {

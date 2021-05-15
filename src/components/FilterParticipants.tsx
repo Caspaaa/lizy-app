@@ -7,7 +7,7 @@ interface Participant {
 
 interface Props {}
 
-export const SearchParticipants: React.FunctionComponent<Props> = () => {
+export const FilterParticipants: React.FunctionComponent<Props> = () => {
   const [participants, setParticipants] = React.useState<Participant[]>([
     { name: "Gilles", isChecked: true },
     { name: "Vince", isChecked: true },

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Restaurants } from "./Restaurants";
-import { Search } from "./Search";
+import { Filter } from "./Filter";
 
 interface Restaurant {
   image: string;
@@ -73,7 +73,7 @@ export const Places: React.FunctionComponent = () => {
 
   return (
     <div className={isBoxed ? "boxed-form" : ""}>
-      <Search
+      <Filter
         search={search}
         handleInputChange={handleInputChange}
         onSubmit={onSubmit}
