@@ -17,6 +17,7 @@ export const PriceRange: React.FunctionComponent<Props> = ({
 
   return (
     <div className="input-price">
+      <div className="input-price__title">Est-ce que ça flambe ?</div>
       <PriceRangeButton
         priceRange={priceRange}
         value={1}

@@ -441,7 +441,7 @@ img.icon {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  margin: 10px 4px;
+  margin: 10px 4px 0;
   background: transparent;
   cursor: pointer;
   opacity: 0.8;
@@ -477,6 +477,7 @@ img.icon {
 }
 
 input.input-text:hover,
+select.input-text:hover,
 .participants:hover {
   border-color: #ff006e;
 }
@@ -502,11 +503,21 @@ input.input-text:hover,
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 40px 0 0;
+  margin: 20px 0 0;
 }
 
 .input-price {
   margin: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+}
+
+.input-price__title {
+  width: 100%;
+  text-align: center;
 }
 
 .form-input--submit {
@@ -578,7 +589,7 @@ input.input-text:hover,
     width: 50%;
     margin: auto;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -682,4 +693,8 @@ body .boxed-form .css-26l3qy-menu {
 
 .form-search__submit.hidden {
   display: none;
+}
+
+.boxed-form .input-price {
+  margin: 20px 0 0;
 }
