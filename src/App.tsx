@@ -8,19 +8,17 @@ import { WithAuth } from "./components/WithAuth";
 function App() {
   return (
     <Router>
-      <div className="App">
-        <div className="lizy">
-          <Switch>
-            <Route path="/" exact>
-              <Login />
-            </Route>
-            <Route path="/places" exact>
-              <WithAuth>
-                <Places />
-              </WithAuth>
-            </Route>
-          </Switch>
-        </div>
+      <div className="lizy">
+        <Switch>
+          <Route path="/" exact>
+            <Login />
+          </Route>
+          <Route path="/places" exact>
+            <WithAuth>
+              <Places />
+            </WithAuth>
+          </Route>
+        </Switch>
       </div>
     </Router>
   );

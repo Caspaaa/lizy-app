@@ -30,14 +30,14 @@ export const Restaurant: React.FunctionComponent<Props> = ({ place }) => {
 
       <div className="restaurant__desc">
         <div className="restaurant-desc-item restaurant-cuisine">
-          <div className="restaurant-icon restaurant-icon--cuisine">
+          <div className="restaurant-desc-item__icon">
             <img
               src={cuisineIcon}
               alt="cuisine-icon"
               className="icon icon--cuisine"
             />
           </div>
-          <div>{place.cuisine}</div>
+          <div className="restaurant-desc-item__text">{place.cuisine}</div>
         </div>
         {place.phone ? <RestaurantPhone phone={place.phone} /> : ""}
         <RestaurantAddress address={place.address} distance={place.distance} />

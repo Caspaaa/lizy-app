@@ -243,7 +243,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  border: 1px solid #e9e9e9;
+  border: 1px solid #d9d9d9;
   border-radius: 5px;
   margin: 10px;
   width: calc(25% - 20px);
@@ -251,6 +251,7 @@ body {
   font-weight: 500;
   align-items: flex-start;
   transition: 0.3s;
+  overflow: hidden;
 }
 
 label {
@@ -324,12 +325,13 @@ img.icon {
   padding: 10px 20px;
 }
 
-.restaurant-icon {
-  margin: 0 15px 0 0;
+.restaurant-desc-item__icon {
+  display: flex;
+  width: 15%;
 }
 
-.restaurant-address__content {
-  text-align: left;
+.restaurant-desc-item__text {
+  width: 85%;
 }
 
 .restaurant-name {
@@ -408,4 +410,140 @@ img.icon {
     width: calc(100% - 20px);
     margin: 10px auto;
   }
+}
+
+/* FORM */
+
+.form-search {
+  display: flex;
+}
+
+.input-text {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 10px 20px;
+  border-width: 2px;
+  margin: 0 20px;
+}
+
+.price-range-button {
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 10px 4px;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.price-range-button.price-range-button--active {
+  background: -webkit-linear-gradient(right, #f0057e, #fd320c);
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.price-range-button__text {
+  font-weight: 600;
+  font-size: 1.1em;
+  background: -webkit-linear-gradient(right, #f0057e, #fd320c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.restaurant.price-range-button__text {
+  color: -webkit-linear-gradient(right, #f0057e, #fd320c);
+}
+
+.price-range-button--active .price-range-button__text {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+input.input-text:focus-visible {
+  outline-offset: 0px;
+}
+
+input.input-text:focus-visible {
+  outline: #ff006e auto 1px;
+}
+
+.form-search {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.form-search__inputs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-search__submit {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 40px 0 0;
+}
+
+.input-price {
+  margin: 0 20px;
+}
+
+.form-input--submit {
+  border: none;
+  border-radius: 4px;
+  padding: 15px 40px;
+  border-width: 2px;
+  margin: 0 20px;
+  background: -webkit-linear-gradient(right, #f0057e, #fd320c);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 799px) {
+  .input-text {
+    margin: 10px auto;
+    width: 50%;
+  }
+
+  .input-price {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* HEADER */
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+img.logo__img {
+  height: 150px;
+}
+
+/* LOGIN */
+
+.form-search__inputs--login {
+  flex-wrap: wrap;
+}
+
+.input-text--login {
+  margin: 10px auto;
+  width: 100%;
+}
+
+.form-search--login {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
 }

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useHistory } from "react-router-dom";
+import { Header } from "./Header";
 
 interface Props {}
 
@@ -48,31 +49,33 @@ export const Login: React.FunctionComponent<Props> = () => {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          <h1>Lizy</h1>
-          <form onSubmit={onSubmit}>
-            <label>Login</label>
-            <input
-              type="text"
-              name="login"
-              value={user.login}
-              onChange={handleInputChange}
-              required
-            />
-            <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              value={user.password}
-              onChange={handleInputChange}
-              required
-            />
-            <input type="submit" value="Sign in" />
-          </form>
+    <>
+      <Header />
+      <form className="form-search form-search--login" onSubmit={onSubmit}>
+        <div className="form-search__inputs form-search__inputs--login">
+          <input
+            className="input-text input-text--login"
+            type="text"
+            name="login"
+            placeholder="Login"
+            value={user.login}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            className="input-text input-text--login"
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={user.password}
+            onChange={handleInputChange}
+            required
+          />
         </div>
-      </div>
-    </div>
+        <div className="form-search__submit">
+          <input className="form-input--submit" type="submit" value="Sign in" />
+        </div>
+      </form>
+    </>
   );
 };

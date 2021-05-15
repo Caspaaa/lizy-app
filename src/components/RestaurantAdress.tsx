@@ -12,14 +12,14 @@ export const RestaurantAddress: React.FunctionComponent<Props> = ({
 }) => {
   return (
     <div className="restaurant-desc-item restaurant-address">
-      <div className="restaurant-icon restaurant-icon--address">
+      <div className="restaurant-desc-item__icon">
         <img
           src={addressIcon}
           alt="retaurant-address"
           className="icon icon--address"
         />
       </div>
-      <div className="restaurant-address__content">
+      <div className="restaurant-desc-item__text">
         {address.map((subAddress, index) => {
           return (
             <div key={index}>

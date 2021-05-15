@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Header } from "./Header";
 import { PriceRange } from "./PriceRange";
 
 export const Search: React.FunctionComponent<Props> = ({
@@ -9,21 +10,23 @@ export const Search: React.FunctionComponent<Props> = ({
 }) => {
   return (
     <div>
-      <div>
-        <h1>Search for restaurants</h1>
-        <form onSubmit={onSubmit}>
-          <label>Location : </label>
+      <Header />
+      <form className="form-search" onSubmit={onSubmit}>
+        <div className="form-search__inputs">
           <input
+            className="input-text"
             type="text"
             name="location"
+            placeholder="Adresse"
             value={search.location}
             onChange={handleInputChange}
             required
           />
-          <label>Radius : </label>
           <input
+            className="input-text"
             type="text"
             name="radius"
+            placeholder="Rayon"
             value={search.radius}
             onChange={handleInputChange}
             required
@@ -33,9 +36,11 @@ export const Search: React.FunctionComponent<Props> = ({
             priceRange={search.priceRange}
             updatePriceRange={updatePriceRange}
           />
-          <input type="submit" value="Search" />
-        </form>
-      </div>
+        </div>
+        <div className="form-search__submit">
+          <input className="form-input--submit" type="submit" value="Search" />
+        </div>
+      </form>
     </div>
   );
 };
