@@ -6,7 +6,7 @@ import restaurantIcon from "../assets/images/restaurant-icon.png";
 import cuisineIcon from "../assets/images/cuisine-icon.png";
 
 interface Props {
-  place: Restaurant;
+  place: any;
 }
 
 export const Restaurant: React.FunctionComponent<Props> = ({ place }) => {
