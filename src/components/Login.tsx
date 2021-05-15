@@ -49,10 +49,13 @@ export const Login: React.FunctionComponent<Props> = () => {
   };
 
   return (
-    <>
+    <div>
       <Header />
-      <form className="form-search form-search--login" onSubmit={onSubmit}>
-        <div className="form-search__inputs form-search__inputs--login">
+      <form
+        className="form-search form-search--login shadow"
+        onSubmit={onSubmit}
+      >
+        <div className="form-search__inputs form-search__inputs--login ">
           <input
             className="input-text input-text--login"
             type="text"
@@ -76,6 +79,6 @@ export const Login: React.FunctionComponent<Props> = () => {
           <input className="form-input--submit" type="submit" value="Sign in" />
         </div>
       </form>
-    </>
+    </div>
   );
 };

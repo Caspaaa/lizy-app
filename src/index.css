@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
+body,
+#root,
+.lizy {
+  height: 100vh;
+  background: #f8f8f8;
+}
+
 @font-face {
   font-family: "Proxima Soft";
   src: url("./assets/fonts/ProximaSoft-SemiBold.eot");
@@ -419,6 +426,7 @@ img.icon {
 }
 
 .input-text {
+  position: relative;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
   padding: 10px 20px;
@@ -479,6 +487,7 @@ input.input-text:focus-visible {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .form-search__submit {
@@ -503,6 +512,53 @@ input.input-text:focus-visible {
   font-weight: 600;
   font-size: 1em;
   cursor: pointer;
+}
+
+.participants__title {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.participants__name {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  left: 0;
+  top: 60px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 10px;
+  border-width: 2px;
+  box-sizing: border-box;
+  background: #fff;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.participants__name.show-participants {
+  opacity: 1;
+}
+
+.participant {
+  width: 100%;
+  margin: 5px 0;
+  display: flex;
+}
+
+.participant__checkbox {
+  margin-right: 10px;
+}
+
+.closing-cross {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #bfbfbf;
 }
 
 @media only screen and (max-width: 799px) {
@@ -543,7 +599,19 @@ img.logo__img {
 
 .form-search--login {
   width: 400px;
-  margin: 50px auto;
-  padding: 20px;
+  margin: 100px auto;
+  padding: 40px;
   background: #fff;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 449px) {
+  img.logo__img {
+    height: 100px;
+  }
+
+  .form-search--login {
+    width: 90%;
+    margin: 100px auto;
+  }
 }

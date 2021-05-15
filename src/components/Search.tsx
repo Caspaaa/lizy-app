@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Header } from "./Header";
 import { PriceRange } from "./PriceRange";
+import { SearchParticipants } from "./SearchParticipants";
 
 export const Search: React.FunctionComponent<Props> = ({
   search,
@@ -31,6 +32,7 @@ export const Search: React.FunctionComponent<Props> = ({
             onChange={handleInputChange}
             required
           />
+          <SearchParticipants />
 
           <PriceRange
             priceRange={search.priceRange}
