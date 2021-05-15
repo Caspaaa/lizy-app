@@ -52,7 +52,11 @@ export const Filter: React.FunctionComponent<Props> = ({
           />
         </div>
         <div className={`form-search__submit ${isBoxed ? "" : "hidden"}`}>
-          <input className="form-input--submit" type="submit" value="Search" />
+          <input
+            className="form-input--submit"
+            type="submit"
+            value="Rechercher"
+          />
         </div>
       </form>
     </div>
