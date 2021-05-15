@@ -1,18 +1,6 @@
 import * as React from "react";
 import { PriceRangeButton } from "./PriceRangeButton";
 
-// const addOrRemove = (array: number, item: number) => {
-//   const exists === item;
-//   if (exists) {
-//     return array.filter((element: number) => {
-//       return element !== item;
-//     });
-//   }
-//   const result = array;
-//   result.push(item);
-//   return result;
-// };
-
 interface Props {
   priceRange: number;
   updatePriceRange: Function;

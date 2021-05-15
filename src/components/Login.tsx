@@ -26,8 +26,8 @@ export const Login: React.FunctionComponent<Props> = () => {
 
     try {
       const response = await fetch(
-        // `${process.env.REACT_APP_API_URL}/getToken`,
-        `http://localhost:8000/api/getToken`,
+        `${process.env.REACT_APP_API_URL}/getToken`,
+        // `http://localhost:8000/api/getToken`,
         {
           method: "POST",
           body: JSON.stringify(user),
