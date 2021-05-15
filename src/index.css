@@ -531,7 +531,6 @@ input.input-text:hover,
 .participants__name {
   position: absolute;
   width: 100%;
-  display: flex;
   flex-wrap: wrap;
   left: 0;
   top: 60px;
@@ -541,13 +540,13 @@ input.input-text:hover,
   border-width: 2px;
   box-sizing: border-box;
   background: #fff;
-  opacity: 0;
+  display: none;
   transition: 0.3s;
   z-index: 1;
 }
 
 .participants__name.show-participants {
-  opacity: 1;
+  display: flex;
 }
 
 .participant {

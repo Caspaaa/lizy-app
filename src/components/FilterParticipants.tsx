@@ -38,14 +38,14 @@ export const FilterParticipants: React.FunctionComponent<Props> = () => {
 
   return (
     <>
-      <div className="participants input-text">
-        <div className="participants__title" onClick={toggleParticipants}>
-          Qui a faim ?
-        </div>
+      <div className="participants input-text" onClick={toggleParticipants}>
+        <div className="participants__title">Qui a faim ?</div>
         <div
           className={`participants__name ${visible ? "show-participants" : ""}`}
         >
-          <span className="closing-cross">x</span>
+          <span className="closing-cross" onClick={toggleParticipants}>
+            x
+          </span>
           {participants.map((participant, index) => (
             <div key={index} className="participant">
               <input
