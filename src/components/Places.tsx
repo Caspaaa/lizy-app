@@ -27,6 +27,13 @@ export const Places: React.FunctionComponent = () => {
     });
   };
 
+  const updateCoords = (coords: string) => {
+    setSearch({
+      ...search,
+      location: coords,
+    });
+  };
+
   const onSubmit = async (event: any) => {
     event.preventDefault();
 
@@ -55,6 +62,7 @@ export const Places: React.FunctionComponent = () => {
         handleInputChange={handleInputChange}
         onSubmit={onSubmit}
         updatePriceRange={updatePriceRange}
+        updateCoords={updateCoords}
       />
       <Restaurants restaurants={restaurants} />
     </div>

@@ -1,4 +1,5 @@
 import * as React from "react";
+import SearchAddress from "./SearchAddress";
 import { Header } from "./Header";
 import { PriceRange } from "./PriceRange";
 import { SearchParticipants } from "./SearchParticipants";
@@ -8,21 +9,15 @@ export const Search: React.FunctionComponent<Props> = ({
   handleInputChange,
   onSubmit,
   updatePriceRange,
+  updateCoords,
 }) => {
   return (
     <div>
       <Header />
       <form className="form-search" onSubmit={onSubmit}>
         <div className="form-search__inputs">
-          <input
-            className="input-text"
-            type="text"
-            name="location"
-            placeholder="Adresse"
-            value={search.location}
-            onChange={handleInputChange}
-            required
-          />
+          <SearchAddress updateCoords={updateCoords} />
+
           <input
             className="input-text"
             type="text"

@@ -60,4 +60,5 @@ interface Props {
   handleInputChange: React.ChangeEventHandler;
   onSubmit: React.FormEventHandler;
   updatePriceRange: Function;
+  updateCoords: Function;
 }
