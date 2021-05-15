@@ -2,6 +2,19 @@ import * as React from "react";
 import { Restaurants } from "./Restaurants";
 import { Search } from "./Search";
 
+interface Restaurant {
+  image: string;
+  id: string;
+  name: string;
+  address: string[];
+  distance: number;
+  cuisine: string[];
+  phone: string;
+  price: 1 | 2 | 3 | 4;
+  rating: number;
+  rating_count: number;
+}
+
 export const Places: React.FunctionComponent = () => {
   const [search, setSearch] = React.useState({
     location: "50.826587,4.37309",
@@ -10,6 +23,8 @@ export const Places: React.FunctionComponent = () => {
   });
 
   const [restaurants, setRestaurants] = React.useState<Restaurant[]>([]);
+
+  const [isBoxed, setIsBoxed] = React.useState(true);
 
   const handleInputChange = (event: any) => {
     const { value, name } = event.target;
@@ -49,6 +64,7 @@ export const Places: React.FunctionComponent = () => {
       const responseJSON = await response.json();
       console.log("responseJSON", responseJSON);
       setRestaurants(responseJSON);
+      if (isBoxed) setIsBoxed(!isBoxed);
     } catch (error) {
       console.error(error);
       alert("Error searching please try again");
@@ -56,13 +72,14 @@ export const Places: React.FunctionComponent = () => {
   };
 
   return (
-    <div>
+    <div className={isBoxed ? "boxed-form" : ""}>
       <Search
         search={search}
         handleInputChange={handleInputChange}
         onSubmit={onSubmit}
         updatePriceRange={updatePriceRange}
         updateCoords={updateCoords}
+        isBoxed={isBoxed}
       />
       <Restaurants restaurants={restaurants} />
     </div>

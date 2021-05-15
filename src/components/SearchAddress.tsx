@@ -7,11 +7,7 @@ interface Props {
 }
 
 const SearchAddress: React.FunctionComponent<Props> = ({ updateCoords }) => {
-  // const [value, setValue] = React.useState(null);
-
   const getPlaceId = (place: any) => {
-    // setValue(place);
-    console.log("place.place_id", place.value.place_id);
     geocodeByPlaceId(place.value.place_id)
       .then((results) => getLatLng(results[0]))
       .then(({ lat, lng }) => updateCoords(`${lat},${lng}`))

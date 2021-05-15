@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react";
+
 interface YelpItemCategory {
   alias: string;
   title: string;

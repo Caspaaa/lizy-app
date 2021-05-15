@@ -4,12 +4,28 @@ import { Header } from "./Header";
 import { PriceRange } from "./PriceRange";
 import { SearchParticipants } from "./SearchParticipants";
 
+interface SearchInterface {
+  location: string;
+  radius: number;
+  priceRange: number;
+}
+
+interface Props {
+  search: SearchInterface;
+  handleInputChange: React.ChangeEventHandler;
+  onSubmit: React.FormEventHandler;
+  updatePriceRange: Function;
+  updateCoords: Function;
+  isBoxed: boolean;
+}
+
 export const Search: React.FunctionComponent<Props> = ({
   search,
   handleInputChange,
   onSubmit,
   updatePriceRange,
   updateCoords,
+  isBoxed,
 }) => {
   return (
     <div>
@@ -17,7 +33,6 @@ export const Search: React.FunctionComponent<Props> = ({
       <form className="form-search" onSubmit={onSubmit}>
         <div className="form-search__inputs">
           <SearchAddress updateCoords={updateCoords} />
-
           <input
             className="input-text"
             type="text"
@@ -34,7 +49,7 @@ export const Search: React.FunctionComponent<Props> = ({
             updatePriceRange={updatePriceRange}
           />
         </div>
-        <div className="form-search__submit">
+        <div className={`form-search__submit ${isBoxed ? "" : "hidden"}`}>
           <input className="form-input--submit" type="submit" value="Search" />
         </div>
       </form>
