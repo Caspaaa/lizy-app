@@ -279,6 +279,13 @@ select.input-text {
   outline: 0px;
 }
 
+.participant {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  width: 100%;
+}
+
 .participants__title {
   display: flex;
   align-items: center;
@@ -312,23 +319,24 @@ select.input-text {
   display: flex;
 }
 
-.participant {
-  display: flex;
-  width: 100%;
-  margin: 5px 0;
-}
-
 .participant__checkbox {
-  margin-right: 10px;
+  margin-right: 20px;
+  height: 15px;
+  width: 15px;
 }
 
-.closing-cross {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 1.2em;
-  font-weight: 500;
-  color: #bfbfbf;
+.close-select {
+  margin: 10px auto 0;
+  padding: 10px 0;
+  width: 100px;
+  text-align: center;
+  background: -webkit-linear-gradient(right, #f0057e, #fd320c);
+  border-radius: 4px;
+  color: #fff;
+}
+
+.boxed-form .close-select {
+  width: 100%;
 }
 
 .input-price {
@@ -556,6 +564,7 @@ body .boxed-form .css-26l3qy-menu {
   .participants.input-text,
   .boxed-form .participants.input-text {
     padding: 0;
+    margin: 10px;
   }
 
   .form-search {

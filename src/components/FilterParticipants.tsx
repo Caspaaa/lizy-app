@@ -39,9 +39,6 @@ export const FilterParticipants: React.FunctionComponent<Props> = ({
         <div
           className={`participants__name ${visible ? "show-participants" : ""}`}
         >
-          <span className="closing-cross" onClick={toggleParticipants}>
-            x
-          </span>
           {participants.map((participant, index) => (
             <div key={index} className="participant">
               <input
@@ -55,6 +52,9 @@ export const FilterParticipants: React.FunctionComponent<Props> = ({
               {participant.name}
             </div>
           ))}
+          <div className="close-select" onClick={toggleParticipants}>
+            OK
+          </div>
         </div>
       </div>
     </>
