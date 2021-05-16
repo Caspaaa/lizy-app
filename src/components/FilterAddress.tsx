@@ -7,7 +7,7 @@ interface Props {
 }
 
 const FilterAddress: React.FunctionComponent<Props> = ({ updateCoords }) => {
-  const getPlaceId = (place: any) => {
+  const setPlaceCoords = (place: any) => {
     geocodeByPlaceId(place.value.place_id)
       .then((results) => getLatLng(results[0]))
       .then(({ lat, lng }) => updateCoords(`${lat},${lng}`))
@@ -24,7 +24,9 @@ const FilterAddress: React.FunctionComponent<Props> = ({ updateCoords }) => {
           },
         }}
         selectProps={{
-          onChange: getPlaceId,
+          // placeholder: place.label,
+          placeholder: "Où êtes-vous ?",
+          onChange: setPlaceCoords,
         }}
       />
     </div>

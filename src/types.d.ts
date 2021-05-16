@@ -1,5 +1,3 @@
-import { MouseEventHandler } from "react";
-
 interface YelpItemCategory {
   alias: string;
   title: string;
@@ -57,10 +55,7 @@ interface SearchInterface {
   priceRange: number;
 }
 
-interface Props {
-  search: SearchInterface;
-  handleInputChange: React.ChangeEventHandler;
-  onSubmit: React.FormEventHandler;
-  updatePriceRange: Function;
-  updateCoords: Function;
+interface Participant {
+  name: string;
+  isChecked: boolean;
 }

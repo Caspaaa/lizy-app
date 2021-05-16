@@ -4,12 +4,6 @@ import { Header } from "./Header";
 import { PriceRange } from "./PriceRange";
 import { FilterParticipants } from "./FilterParticipants";
 
-interface SearchInterface {
-  location: string;
-  radius: number;
-  priceRange: number;
-}
-
 interface Props {
   search: SearchInterface;
   handleInputChange: React.ChangeEventHandler;

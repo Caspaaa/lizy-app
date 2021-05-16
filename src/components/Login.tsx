@@ -2,9 +2,7 @@ import * as React from "react";
 import { useHistory } from "react-router-dom";
 import { Header } from "./Header";
 
-interface Props {}
-
-export const Login: React.FunctionComponent<Props> = () => {
+export const Login: React.FunctionComponent = () => {
   let history = useHistory();
 
   const [user, setUser] = React.useState({

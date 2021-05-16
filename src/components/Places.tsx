@@ -2,19 +2,6 @@ import * as React from "react";
 import { Restaurants } from "./Restaurants";
 import { Filter } from "./Filter";
 
-interface Restaurant {
-  image: string;
-  id: string;
-  name: string;
-  address: string[];
-  distance: number;
-  cuisine: string[];
-  phone: string;
-  price: 1 | 2 | 3 | 4;
-  rating: number;
-  rating_count: number;
-}
-
 export const Places: React.FunctionComponent = () => {
   const [search, setSearch] = React.useState({
     location: "50.826587,4.37309",

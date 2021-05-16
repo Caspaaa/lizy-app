@@ -434,6 +434,7 @@ img.icon {
   margin: 0 20px;
   cursor: pointer;
   transition: 0.3s;
+  width: 100%;
 }
 
 .price-range-button {
@@ -476,11 +477,11 @@ img.icon {
   outline: 0px;
 }
 
-input.input-text:hover,
+/* input.input-text:hover,
 select.input-text:hover,
 .participants:hover {
   border-color: #ff006e;
-}
+} */
 
 .form-search {
   display: flex;
@@ -544,7 +545,7 @@ select.input-text:hover,
   width: 100%;
   flex-wrap: wrap;
   left: 0;
-  top: 60px;
+  top: 65px;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
   padding: 10px;
@@ -578,18 +579,63 @@ select.input-text:hover,
   font-weight: 500;
   color: #bfbfbf;
 }
+/* GOOGLE AUTOCOMPLETE */
 
-@media only screen and (max-width: 799px) {
-  .input-text {
-    margin: 10px auto;
-    width: 50%;
+.form-search__inputs > div:first-child {
+  width: 100%;
+}
+
+body .css-2b097c-container {
+  position: relative;
+}
+
+body .css-yk16xz-control,
+body .css-1pahdxg-control,
+body .css-26l3qy-menu {
+  position: relative;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 10px 20px;
+  border-width: 2px;
+  margin: 0 20px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+body .css-26l3qy-menu {
+  position: absolute;
+  top: 55px;
+  width: calc(100% - 20px);
+}
+
+body .css-1pahdxg-control:hover,
+body .css-yk16xz-control:hover {
+  border-color: #ff006e;
+}
+
+body .boxed-form .css-yk16xz-control,
+body .boxed-form .css-1pahdxg-control,
+body .boxed-form .css-26l3qy-menu {
+  padding: 10px 20px;
+  margin: 10px;
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  body .css-yk16xz-control,
+  body .css-1pahdxg-control,
+  body .css-26l3qy-menu {
+    margin: 0 10px;
   }
 
-  .input-price {
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+  .input-text {
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .boxed-form .form-search {
+    width: 90%;
+    padding: 20px;
   }
 }
 
@@ -623,72 +669,18 @@ img.logo__img {
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 449px) {
-  img.logo__img {
-    height: 100px;
-  }
-
-  .form-search--login {
-    width: 90%;
-    margin: 100px auto;
-  }
-}
-
-/* GOOGLE AUTOCOMPLETE */
-
-body .css-2b097c-container {
-  position: relative;
-}
-
-body .css-yk16xz-control,
-body .css-1pahdxg-control,
-body .css-26l3qy-menu {
-  position: relative;
-  border: 1px solid #d9d9d9;
-  border-radius: 4px;
-  padding: 10px 20px;
-  border-width: 2px;
-  margin: 0 20px;
-  width: 400px;
-  box-shadow: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-body .css-26l3qy-menu {
-  position: absolute;
-  top: 65px;
-}
-
-body .css-1pahdxg-control:hover,
-body .css-yk16xz-control:hover {
-  border-color: #ff006e;
-}
-
-body .boxed-form .css-yk16xz-control,
-body .boxed-form .css-1pahdxg-control,
-body .boxed-form .css-26l3qy-menu {
-  padding: 10px 20px;
-  margin: 10px 20px;
-  width: 300px;
-}
-
-.boxed-form .input-text[name="radius"] {
-  width: 300px;
-}
-
 .boxed-form .input-text {
   padding: 20px 20px;
-  margin: 10px 10px;
-  width: 300px;
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 .boxed-form .form-search {
-  width: 400px;
   margin: 100px auto;
   padding: 40px;
   background: #fff;
   box-sizing: border-box;
+  width: 400px;
 }
 
 .form-search__submit.hidden {
@@ -697,4 +689,24 @@ body .boxed-form .css-26l3qy-menu {
 
 .boxed-form .input-price {
   margin: 20px 0 0;
+}
+
+@media only screen and (max-width: 449px) {
+  body .boxed-form .form-search {
+    width: 90%;
+    padding: 20px;
+  }
+  img.logo__img {
+    height: 100px;
+  }
+
+  .form-search--login {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .boxed-form .input-text {
+    padding: 20px;
+    margin: 10px;
+  }
 }

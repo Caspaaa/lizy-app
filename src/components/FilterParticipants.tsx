@@ -1,13 +1,6 @@
 import * as React from "react";
 
-interface Participant {
-  name: string;
-  isChecked: boolean;
-}
-
-interface Props {}
-
-export const FilterParticipants: React.FunctionComponent<Props> = () => {
+export const FilterParticipants: React.FunctionComponent = () => {
   const [participants, setParticipants] = React.useState<Participant[]>([
     { name: "Gilles", isChecked: true },
     { name: "Vince", isChecked: true },
