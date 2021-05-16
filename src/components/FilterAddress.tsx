@@ -17,7 +17,7 @@ const FilterAddress: React.FunctionComponent<Props> = ({ updateCoords }) => {
   return (
     <div>
       <GooglePlacesAutocomplete
-        apiKey="AIzaSyCMkBPD84IDhGeDvEyXY4OumcwHROvGJ58"
+        apiKey={process.env.REACT_APP_GOOGLE_API_KEY}
         autocompletionRequest={{
           componentRestrictions: {
             country: ["be"],
