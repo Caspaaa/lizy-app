@@ -11,7 +11,7 @@ interface Props {
 
 export const Restaurant: React.FunctionComponent<Props> = ({ place }) => {
   return (
-    <div className="restaurant shadow">
+    <div className="restaurant">
       <div className="restaurant__head">
         <div className="restaurant-name">
           <div className="restaurant-name__icon">
@@ -37,7 +37,9 @@ export const Restaurant: React.FunctionComponent<Props> = ({ place }) => {
               className="icon icon--cuisine"
             />
           </div>
-          <div className="restaurant-desc-item__text">{place.cuisine}</div>
+          <div className="restaurant-desc-item__text">
+            {place.cuisine.join(" - ")}
+          </div>
         </div>
         {place.phone ? <RestaurantPhone phone={place.phone} /> : ""}
         <RestaurantAddress address={place.address} distance={place.distance} />

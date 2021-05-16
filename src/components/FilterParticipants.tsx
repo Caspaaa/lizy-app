@@ -26,7 +26,6 @@ export const FilterParticipants: React.FunctionComponent<Props> = ({
             : participant.isChecked,
       };
     });
-    console.log("newParticipants", newParticipants);
     updateParticipants(newParticipants);
   };
 

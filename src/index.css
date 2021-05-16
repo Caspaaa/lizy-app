@@ -1,50 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-body,
-#root,
-.lizy {
-  height: 100vh;
-  background: #f8f8f8;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-SemiBold.eot");
-  src: local("Proxima Soft SemiBold"), local("ProximaSoft-SemiBold"),
-    url("./assets/fonts/ProximaSoft-SemiBold.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-SemiBold.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-SemiBold.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-BoldIt.eot");
-  src: local("Proxima Soft Bold Italic"), local("ProximaSoft-BoldIt"),
-    url("./assets/fonts/ProximaSoft-BoldIt.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-BoldIt.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-BoldIt.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-BoldIt.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-}
-
 @font-face {
   font-family: "Proxima Soft";
   src: url("./assets/fonts/ProximaSoft-Light.eot");
@@ -56,32 +9,6 @@ body,
     url("./assets/fonts/ProximaSoft-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-Thin.eot");
-  src: local("Proxima Soft Thin"), local("ProximaSoft-Thin"),
-    url("./assets/fonts/ProximaSoft-Thin.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-Thin.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-Thin.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-LightIt.eot");
-  src: local("Proxima Soft Light Italic"), local("ProximaSoft-LightIt"),
-    url("./assets/fonts/ProximaSoft-LightIt.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-LightIt.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-LightIt.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-LightIt.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
 }
 
 @font-face {
@@ -99,119 +26,15 @@ body,
 
 @font-face {
   font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-SemiBoldIt.eot");
-  src: local("Proxima Soft SemiBold Italic"), local("ProximaSoft-SemiBoldIt"),
-    url("./assets/fonts/ProximaSoft-SemiBoldIt.eot?#iefix")
+  src: url("./assets/fonts/ProximaSoft-SemiBold.eot");
+  src: local("Proxima Soft SemiBold"), local("ProximaSoft-SemiBold"),
+    url("./assets/fonts/ProximaSoft-SemiBold.eot?#iefix")
       format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-SemiBoldIt.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-SemiBoldIt.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-SemiBoldIt.ttf") format("truetype");
+    url("./assets/fonts/ProximaSoft-SemiBold.woff2") format("woff2"),
+    url("./assets/fonts/ProximaSoft-SemiBold.woff") format("woff"),
+    url("./assets/fonts/ProximaSoft-SemiBold.ttf") format("truetype");
   font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-Bold.eot");
-  src: local("Proxima Soft Bold"), local("ProximaSoft-Bold"),
-    url("./assets/fonts/ProximaSoft-Bold.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-Bold.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-Bold.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-Bold.ttf") format("truetype");
-  font-weight: bold;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-Black.eot");
-  src: local("Proxima Soft Black"), local("ProximaSoft-Black"),
-    url("./assets/fonts/ProximaSoft-Black.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-Black.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-Black.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-RegularIt.eot");
-  src: local("Proxima Soft Regular Italic"), local("ProximaSoft-RegularIt"),
-    url("./assets/fonts/ProximaSoft-RegularIt.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-RegularIt.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-RegularIt.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-RegularIt.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-Regular.eot");
-  src: local("Proxima Soft Regular"), local("ProximaSoft-Regular"),
-    url("./assets/fonts/ProximaSoft-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-Regular.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-Regular.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-MediumIt.eot");
-  src: local("Proxima Soft Medium Italic"), local("ProximaSoft-MediumIt"),
-    url("./assets/fonts/ProximaSoft-MediumIt.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-MediumIt.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-MediumIt.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-MediumIt.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-BlackIt.eot");
-  src: local("Proxima Soft Black Italic"), local("ProximaSoft-BlackIt"),
-    url("./assets/fonts/ProximaSoft-BlackIt.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-BlackIt.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-BlackIt.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-BlackIt.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-ExtraBoldIt.eot");
-  src: local("Proxima Soft ExtraBold Italic"), local("ProximaSoft-ExtraBoldIt"),
-    url("./assets/fonts/ProximaSoft-ExtraBoldIt.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-ExtraBoldIt.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-ExtraBoldIt.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-ExtraBoldIt.ttf") format("truetype");
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("./assets/fonts/ProximaSoft-ThinIt.eot");
-  src: local("Proxima Soft Thin Italic"), local("ProximaSoft-ThinIt"),
-    url("./assets/fonts/ProximaSoft-ThinIt.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/ProximaSoft-ThinIt.woff2") format("woff2"),
-    url("./assets/fonts/ProximaSoft-ThinIt.woff") format("woff"),
-    url("./assets/fonts/ProximaSoft-ThinIt.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic;
 }
 
 @font-face {
@@ -227,10 +50,27 @@ body,
   font-style: normal;
 }
 
-/* SEARCH */
+/* ----------------- APP ----------------- */
 
 body {
-  font-family: "Proxima Soft";
+  margin: 0;
+  font-family: "Proxima Soft", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body,
+#root,
+.lizy {
+  height: 100vh;
+  background: #f8f8f8;
 }
 
 .lizy {
@@ -238,12 +78,35 @@ body {
   margin: auto;
 }
 
+.lizy img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.font-weight--thin {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* ----------------- HEADER ----------------- */
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+img.logo__img {
+  height: 150px;
+}
+
+/* ----------------- RESTAURANTS ----------------- */
+
 .results {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   width: 100%;
   margin: 50px auto auto;
-  justify-content: flex-start;
 }
 
 .restaurant {
@@ -255,90 +118,14 @@ body {
   margin: 10px;
   width: calc(25% - 20px);
   box-sizing: border-box;
-  font-weight: 500;
-  align-items: flex-start;
+  border-radius: 8px;
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px;
   transition: 0.3s;
   overflow: hidden;
 }
 
-label {
-  margin: 0 20px;
-}
-
-.price-range-button--active {
-  background: rgb(130, 185, 130);
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.restaurant-img-wrapper {
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-}
-
-.restaurant-img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.shadow {
-  border-radius: 8px;
-  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px;
-}
-
-img.rating__star {
-  height: 15px;
-}
-
-.restaurant__extras {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 15px;
-  box-sizing: border-box;
-  margin: auto auto 10px;
-  opacity: 0.8;
-}
-
-.restaurant-extras-rating {
-  display: flex;
-  align-items: center;
-}
-
-img.icon {
-  height: 20px;
-}
-
-.restaurant-desc-item {
-  display: flex;
-  margin: 5px auto;
-  width: 100%;
-  align-items: center;
-  text-align: left;
-}
-
-.restaurant__desc {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px 20px;
-}
-
-.restaurant-desc-item__icon {
-  display: flex;
-  width: 15%;
-}
-
-.restaurant-desc-item__text {
-  width: 85%;
+.restaurant:hover {
+  transform: translateY(-5px);
 }
 
 .restaurant-name {
@@ -372,13 +159,70 @@ img.icon {
   font-size: 1.1em;
 }
 
-.font-weight--thin {
-  font-weight: 300;
+.restaurant-img-wrapper {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.restaurant-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.restaurant__extras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: auto auto 10px;
   opacity: 0.8;
+}
+
+.restaurant-desc-item {
+  display: flex;
+  margin: 5px auto;
+  width: 100%;
+  align-items: center;
+  text-align: left;
+}
+
+.restaurant__desc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.restaurant-desc-item__icon {
+  display: flex;
+  width: 15%;
+}
+
+.restaurant-desc-item__text {
+  width: 85%;
+}
+
+img.icon {
+  height: 20px;
+}
+
+.restaurant-extras-rating {
+  display: flex;
+  align-items: center;
 }
 
 .restaurant-extras-rating__count {
   margin: 0 0 2px 5px;
+}
+
+img.rating__star {
+  height: 15px;
 }
 
 .restaurant-extras-price {
@@ -387,65 +231,118 @@ img.icon {
   font-size: 1.2em;
 }
 
-.restaurant:hover {
-  transform: translateY(-5px);
-}
-
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
-  .lizy {
-    width: 800px;
-  }
-  .restaurant {
-    width: calc(33.33% - 20px);
-  }
-}
-
-@media only screen and (min-width: 450px) and (max-width: 799px) {
-  .lizy {
-    width: 100%;
-  }
-  .restaurant {
-    width: calc(50% - 20px);
-  }
-}
-
-@media only screen and (max-width: 449px) {
-  .lizy {
-    width: 100%;
-  }
-  .restaurant {
-    width: calc(100% - 20px);
-    margin: 10px auto;
-  }
-}
-
-/* FORM */
+/* ----------------- FILTERS ----------------- */
 
 .form-search {
   display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0;
+  padding: 40px 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px;
+}
+
+.form-search__inputs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.form-search__submit {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0 0;
 }
 
 .input-text {
   position: relative;
+  margin: 0 20px;
+  padding: 19px 20px;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
-  padding: 19px 20px;
   border-width: 2px;
-  margin: 0 20px;
   cursor: pointer;
-  /* transition: 0.3s; */
 }
 
 select.input-text {
   width: 140px;
+  font-family: "Proxima Soft";
+  font-weight: 600;
 }
 
-.participants.input-text {
-  width: 130px;
+.input-text:focus-visible {
+  outline-offset: 0px;
+  outline: 0px;
 }
 
-.boxed-form .input-text {
+.participants__title {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.participants.input-text,
+.boxed-form .participants.input-text {
+  padding: 0;
+}
+
+.participants__name {
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  top: 65px;
   width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  border-width: 2px;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.participants__name.show-participants {
+  display: flex;
+}
+
+.participant {
+  display: flex;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.participant__checkbox {
+  margin-right: 10px;
+}
+
+.closing-cross {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #bfbfbf;
+}
+
+.input-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  margin: 0 20px;
+}
+
+.input-price__title {
+  width: 100%;
+  text-align: center;
 }
 
 .price-range-button {
@@ -483,62 +380,12 @@ select.input-text {
   -webkit-text-fill-color: #fff;
 }
 
-.input-text:focus-visible {
-  outline-offset: 0px;
-  outline: 0px;
-}
-
-/* input.input-text:hover,
-select.input-text:hover,
-.participants:hover {
-  border-color: #ff006e;
-} */
-
-.form-search {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 50px 0;
-  border-radius: 8px;
-  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px;
-  background: #fff;
-  padding: 40px 0;
-}
-
-.form-search__inputs {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.form-search__submit {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 20px 0 0;
-}
-
-.input-price {
-  margin: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 160px;
-}
-
-.input-price__title {
-  width: 100%;
-  text-align: center;
-}
-
 .form-input--submit {
+  margin: 0 20px;
+  padding: 15px 40px;
   border: none;
   border-radius: 4px;
-  padding: 15px 40px;
   border-width: 2px;
-  margin: 0 20px;
   background: -webkit-linear-gradient(right, #f0057e, #fd320c);
   color: #fff;
   font-weight: 600;
@@ -546,55 +393,60 @@ select.input-text:hover,
   cursor: pointer;
 }
 
-.participants__title {
-  height: 100%;
-  display: flex;
-  align-items: center;
+.form-search__submit.hidden {
+  display: none;
+}
+
+/* BOXED */
+
+.boxed-form .input-text {
+  margin: 10px;
   padding: 20px;
+  box-sizing: border-box;
 }
-.participants.input-text,
-.boxed-form .participants.input-text {
-  padding: 0;
-}
-.participants__name {
-  position: absolute;
-  width: 100%;
-  flex-wrap: wrap;
-  left: 0;
-  top: 65px;
-  border: 1px solid #d9d9d9;
-  border-radius: 4px;
-  padding: 10px;
-  border-width: 2px;
+
+.boxed-form .form-search {
+  margin: 100px auto;
+  padding: 40px;
+  width: 400px;
   box-sizing: border-box;
   background: #fff;
-  display: none;
-  transition: 0.3s;
-  z-index: 1;
 }
 
-.participants__name.show-participants {
-  display: flex;
+.boxed-form .input-price {
+  margin: 20px 0;
 }
 
-.participant {
+.boxed-form select.input-text,
+.boxed-form .participants.input-text {
   width: 100%;
-  margin: 5px 0;
-  display: flex;
 }
 
-.participant__checkbox {
-  margin-right: 10px;
+/*  LOGIN  */
+
+.form-search__inputs--login {
+  flex-wrap: wrap;
 }
 
-.closing-cross {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  font-size: 1.2em;
-  font-weight: 500;
-  color: #bfbfbf;
+.input-text--login {
+  margin: 10px auto;
+  width: 100%;
 }
+
+.form-search--login {
+  margin: 100px auto;
+  padding: 40px;
+  width: 400px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px;
+}
+
+.participants.input-text {
+  width: 130px;
+}
+
 /* GOOGLE AUTOCOMPLETE */
 
 .boxed-form .form-search__inputs > div:first-child {
@@ -613,11 +465,11 @@ body .css-yk16xz-control,
 body .css-1pahdxg-control,
 body .css-26l3qy-menu {
   position: relative;
+  margin: 10px 20px;
+  padding: 10px 20px;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
-  padding: 10px 20px;
   border-width: 2px;
-  margin: 10px 20px;
   box-shadow: none;
   cursor: pointer;
   transition: 0s;
@@ -641,116 +493,133 @@ body .css-yk16xz-control:hover {
 body .boxed-form .css-yk16xz-control,
 body .boxed-form .css-1pahdxg-control,
 body .boxed-form .css-26l3qy-menu {
-  padding: 10px 20px;
   margin: 10px;
+  padding: 10px 20px;
 }
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
+  /* ---- APP --- */
+
+  .lizy {
+    width: 800px;
+  }
+
+  /* --- RESTAURANT --- */
+
+  .restaurant {
+    width: calc(33.33% - 20px);
+  }
+
+  /* --- FILTERS --- */
+
+  .input-text {
+    margin: 0 10px;
+  }
+
+  /* --- GOOGLE AUTOCOMPLETE --- */
+
   .form-search__inputs > div:first-child {
     width: 200px;
   }
+
   body .css-yk16xz-control,
   body .css-1pahdxg-control,
   body .css-26l3qy-menu {
     margin: 0 10px;
   }
-
-  .input-text {
-    margin: 0 10px;
-  }
 }
 
-@media only screen and (max-width: 799px) {
-  .form-search__inputs > div:first-child {
+@media only screen and (min-width: 450px) and (max-width: 799px) {
+  /* --- APP --- */
+
+  .lizy {
     width: 100%;
   }
+
+  /* --- RESTAURANTS --- */
+
+  .restaurant {
+    width: calc(50% - 20px);
+  }
+
+  /* --- FILTERS --- */
+
   select.input-text,
   .participants.input-text {
     margin: 10px 20px;
-    width: 100%;
     padding: 20px 25px;
+    width: 100%;
+  }
+
+  .participants.input-text,
+  .boxed-form .participants.input-text {
+    padding: 0;
   }
 
   .form-search {
-    width: 90%;
     margin: 50px auto;
     padding: 40px 20px;
+    width: 90%;
     box-sizing: border-box;
   }
 
   .input-price {
     margin: 20px 20px 0;
   }
-}
 
-/* HEADER */
+  /* --- BOXED --- */
 
-.logo {
-  display: flex;
-  justify-content: center;
-}
+  select.input-text,
+  .participants.input-text {
+    margin: 10px 20px;
+  }
 
-img.logo__img {
-  height: 150px;
-}
+  /* --- GOOGLE AUTOCOMPLETE --- */
 
-/* LOGIN */
-
-.form-search__inputs--login {
-  flex-wrap: wrap;
-}
-
-.input-text--login {
-  margin: 10px auto;
-  width: 100%;
-}
-
-.form-search--login {
-  width: 400px;
-  margin: 100px auto;
-  padding: 40px;
-  background: #fff;
-  box-sizing: border-box;
-}
-
-.boxed-form .input-text {
-  padding: 20px 20px;
-  margin: 10px;
-  box-sizing: border-box;
-}
-
-.boxed-form .form-search {
-  margin: 100px auto;
-  padding: 40px;
-  background: #fff;
-  box-sizing: border-box;
-  width: 400px;
-}
-
-.form-search__submit.hidden {
-  display: none;
-}
-
-.boxed-form .input-price {
-  margin: 20px 0 0;
+  .form-search__inputs > div:first-child {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 449px) {
-  body .boxed-form .form-search {
-    width: 90%;
-    padding: 20px;
-    margin: 50px auto;
+  /* --- APP --- */
+
+  .lizy {
+    width: 100%;
   }
+
+  /* --- RESTAURANTS --- */
+
+  .restaurant {
+    margin: 10px auto;
+    width: calc(100% - 20px);
+  }
+
+  /* --- FILTERS --- */
+
   img.logo__img {
     height: 100px;
   }
 
-  .form-search--login {
+  /* --- BOXED --- */
+
+  body .boxed-form .form-search {
+    margin: 50px auto;
+    padding: 20px;
     width: 90%;
-    margin: 100px auto;
   }
 
   .boxed-form .input-text {
-    padding: 20px;
     margin: 10px;
+    padding: 20px;
+  }
+
+  /* --- LOGIN --- */
+
+  .form-search--login {
+    margin: 100px auto;
+    width: 90%;
   }
 }
