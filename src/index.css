@@ -429,11 +429,22 @@ img.icon {
   position: relative;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
-  padding: 10px 20px;
+  padding: 19px 20px;
   border-width: 2px;
   margin: 0 20px;
   cursor: pointer;
-  transition: 0.3s;
+  /* transition: 0.3s; */
+}
+
+select.input-text {
+  width: 140px;
+}
+
+.participants.input-text {
+  width: 130px;
+}
+
+.boxed-form .input-text {
   width: 100%;
 }
 
@@ -498,6 +509,7 @@ select.input-text:hover,
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .form-search__submit {
@@ -538,8 +550,12 @@ select.input-text:hover,
   height: 100%;
   display: flex;
   align-items: center;
+  padding: 20px;
 }
-
+.participants.input-text,
+.boxed-form .participants.input-text {
+  padding: 0;
+}
 .participants__name {
   position: absolute;
   width: 100%;
@@ -581,8 +597,12 @@ select.input-text:hover,
 }
 /* GOOGLE AUTOCOMPLETE */
 
-.form-search__inputs > div:first-child {
+.boxed-form .form-search__inputs > div:first-child {
   width: 100%;
+}
+
+.form-search__inputs > div:first-child {
+  width: 400px;
 }
 
 body .css-2b097c-container {
@@ -597,15 +617,19 @@ body .css-26l3qy-menu {
   border-radius: 4px;
   padding: 10px 20px;
   border-width: 2px;
-  margin: 0 20px;
+  margin: 10px 20px;
   box-shadow: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0s;
 }
 
 body .css-26l3qy-menu {
   position: absolute;
   top: 55px;
+  width: calc(100% - 40px);
+}
+
+body .boxed-form .css-26l3qy-menu {
   width: calc(100% - 20px);
 }
 
@@ -621,6 +645,9 @@ body .boxed-form .css-26l3qy-menu {
   margin: 10px;
 }
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .form-search__inputs > div:first-child {
+    width: 200px;
+  }
   body .css-yk16xz-control,
   body .css-1pahdxg-control,
   body .css-26l3qy-menu {
@@ -633,9 +660,25 @@ body .boxed-form .css-26l3qy-menu {
 }
 
 @media only screen and (max-width: 799px) {
-  .boxed-form .form-search {
+  .form-search__inputs > div:first-child {
+    width: 100%;
+  }
+  select.input-text,
+  .participants.input-text {
+    margin: 10px 20px;
+    width: 100%;
+    padding: 20px 25px;
+  }
+
+  .form-search {
     width: 90%;
-    padding: 20px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  .input-price {
+    margin: 20px 20px 0;
   }
 }
 
@@ -695,6 +738,7 @@ img.logo__img {
   body .boxed-form .form-search {
     width: 90%;
     padding: 20px;
+    margin: 50px auto;
   }
   img.logo__img {
     height: 100px;

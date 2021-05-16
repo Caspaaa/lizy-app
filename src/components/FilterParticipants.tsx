@@ -31,8 +31,11 @@ export const FilterParticipants: React.FunctionComponent = () => {
 
   return (
     <>
-      <div className="participants input-text" onClick={toggleParticipants}>
-        <div className="participants__title">Qui a faim ?</div>
+      <div className="participants input-text">
+        <div className="participants__title" onClick={toggleParticipants}>
+          <div>Qui a faim ?</div>
+        </div>
+
         <div
           className={`participants__name ${visible ? "show-participants" : ""}`}
         >
