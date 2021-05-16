@@ -1,12 +1,26 @@
 import * as React from "react";
-import { Restaurants } from "./Restaurants";
 import { Filter } from "./Filter";
+import { Restaurants } from "./Restaurants";
+
+interface Filters {
+  location: string;
+  radius: number;
+  priceRange: number;
+  participants: Participant[];
+}
 
 export const Places: React.FunctionComponent = () => {
-  const [search, setSearch] = React.useState({
+  const [search, setSearch] = React.useState<Filters>({
     location: "50.826587,4.37309",
-    radius: 200,
+    radius: 500,
     priceRange: 1,
+    participants: [
+      { name: "Gilles", isChecked: true },
+      { name: "Vince", isChecked: true },
+      { name: "Sam", isChecked: true },
+      { name: "Klaas", isChecked: true },
+      { name: "Gaelle", isChecked: true },
+    ],
   });
 
   const [restaurants, setRestaurants] = React.useState<Restaurant[]>([]);
@@ -33,6 +47,13 @@ export const Places: React.FunctionComponent = () => {
     setSearch({
       ...search,
       location: coords,
+    });
+  };
+
+  const updateParticipants = (participants: Participant[]) => {
+    setSearch({
+      ...search,
+      participants: participants,
     });
   };
 
@@ -66,6 +87,7 @@ export const Places: React.FunctionComponent = () => {
         onSubmit={onSubmit}
         updatePriceRange={updatePriceRange}
         updateCoords={updateCoords}
+        updateParticipants={updateParticipants}
         isBoxed={isBoxed}
       />
       <Restaurants restaurants={restaurants} />

@@ -1,14 +1,14 @@
 import * as React from "react";
 
-export const FilterParticipants: React.FunctionComponent = () => {
-  const [participants, setParticipants] = React.useState<Participant[]>([
-    { name: "Gilles", isChecked: true },
-    { name: "Vince", isChecked: true },
-    { name: "Sam", isChecked: true },
-    { name: "Klaas", isChecked: true },
-    { name: "Gaelle", isChecked: true },
-  ]);
+interface Props {
+  participants: Participant[];
+  updateParticipants: Function;
+}
 
+export const FilterParticipants: React.FunctionComponent<Props> = ({
+  participants,
+  updateParticipants,
+}) => {
   const [visible, setVisible] = React.useState(false);
   const toggleParticipants = () => {
     setVisible(!visible);
@@ -16,8 +16,8 @@ export const FilterParticipants: React.FunctionComponent = () => {
 
   const toggleCheck = (event: any) => {
     const { value } = event.target;
-    const newParticipants = [...participants];
-    const brandNewParticipants = newParticipants.map((participant) => {
+    console.log(value);
+    const newParticipants = participants.map((participant) => {
       return {
         name: participant.name,
         isChecked:
@@ -26,7 +26,8 @@ export const FilterParticipants: React.FunctionComponent = () => {
             : participant.isChecked,
       };
     });
-    setParticipants(brandNewParticipants);
+    console.log("newParticipants", newParticipants);
+    updateParticipants(newParticipants);
   };
 
   return (

@@ -53,6 +53,7 @@ interface SearchInterface {
   location: string;
   radius: number;
   priceRange: number;
+  participants: Participant[];
 }
 
 interface Participant {

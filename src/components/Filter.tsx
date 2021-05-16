@@ -1,5 +1,5 @@
 import * as React from "react";
-import SearchAddress from "./FilterAddress";
+import FilterAddress from "./FilterAddress";
 import { Header } from "./Header";
 import { PriceRange } from "./PriceRange";
 import { FilterParticipants } from "./FilterParticipants";
@@ -10,6 +10,7 @@ interface Props {
   onSubmit: React.FormEventHandler;
   updatePriceRange: Function;
   updateCoords: Function;
+  updateParticipants: Function;
   isBoxed: boolean;
 }
 
@@ -19,6 +20,7 @@ export const Filter: React.FunctionComponent<Props> = ({
   onSubmit,
   updatePriceRange,
   updateCoords,
+  updateParticipants,
   isBoxed,
 }) => {
   return (
@@ -26,7 +28,7 @@ export const Filter: React.FunctionComponent<Props> = ({
       <Header />
       <form className="form-search" onSubmit={onSubmit}>
         <div className="form-search__inputs">
-          <SearchAddress updateCoords={updateCoords} />
+          <FilterAddress updateCoords={updateCoords} />
           <select
             className="input-text"
             placeholder="Rayon"
@@ -38,7 +40,10 @@ export const Filter: React.FunctionComponent<Props> = ({
             <option value="5000">5 km</option>
             <option value="10000">10 km</option>
           </select>
-          <FilterParticipants />
+          <FilterParticipants
+            participants={search.participants}
+            updateParticipants={updateParticipants}
+          />
 
           <PriceRange
             priceRange={search.priceRange}

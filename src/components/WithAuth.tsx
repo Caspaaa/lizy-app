@@ -23,6 +23,7 @@ export const WithAuth: React.FunctionComponent = (props: any) => {
 
       setState({ ...state, loading: false });
     });
+    // eslint-disable-next-line
   }, []);
 
   const { loading, redirect } = state;
