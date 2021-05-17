@@ -28,6 +28,7 @@ export const Places: React.FunctionComponent = () => {
   const [isBoxed, setIsBoxed] = React.useState(true);
 
   React.useEffect(() => {
+    // eslint-disable-next-line
     !isBoxed && fetchRestaurants();
   }, [search]);
 
