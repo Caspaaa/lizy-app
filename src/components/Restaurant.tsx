@@ -53,7 +53,11 @@ export const Restaurant: React.FunctionComponent<Props> = ({ place }) => {
           </div>
         </div>
         {place.phone ? <RestaurantPhone phone={place.phone} /> : ""}
-        <RestaurantAddress address={place.address} distance={place.distance} />
+        <RestaurantAddress
+          address={place.address}
+          name={place.name}
+          distance={place.distance}
+        />
       </div>
       <RestaurantExtras
         price={place.price}

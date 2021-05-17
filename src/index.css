@@ -107,6 +107,7 @@ img.logo__img {
   justify-content: flex-start;
   width: 100%;
   margin: 50px auto auto;
+  padding: 0 0 50px;
 }
 
 .restaurant {
@@ -206,6 +207,11 @@ img.logo__img {
 
 .restaurant-desc-item__text {
   width: 85%;
+}
+
+a.restaurant-desc-item__text {
+  text-decoration: none;
+  color: #000;
 }
 
 img.icon {
@@ -491,6 +497,11 @@ body .css-26l3qy-menu {
 
 body .boxed-form .css-26l3qy-menu {
   width: calc(100% - 20px);
+}
+
+body .css-1pahdxg-control:hover,
+body .css-yk16xz-control:hover {
+  border-color: #d9d9d9;
 }
 
 body .unfilled .css-yk16xz-control {

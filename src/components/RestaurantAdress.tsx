@@ -3,12 +3,14 @@ import addressIcon from "../assets/images/location-icon.png";
 
 interface Props {
   address: string[];
+  name: string;
   distance: number;
 }
 
 export const RestaurantAddress: React.FunctionComponent<Props> = ({
   address,
   distance,
+  name,
 }) => {
   return (
     <div className="restaurant-desc-item restaurant-address">
@@ -19,7 +21,11 @@ export const RestaurantAddress: React.FunctionComponent<Props> = ({
           className="icon icon--address"
         />
       </div>
-      <div className="restaurant-desc-item__text">
+      <a
+        href={`https://maps.google.com?q=${name}`}
+        target="_blank"
+        className="restaurant-desc-item__text"
+      >
         {address.map((subAddress, index) => {
           return (
             <div key={index}>
@@ -35,7 +41,7 @@ export const RestaurantAddress: React.FunctionComponent<Props> = ({
             </div>
           );
         })}
-      </div>
+      </a>
     </div>
   );
 };
