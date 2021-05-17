@@ -19,7 +19,7 @@ export const Login: React.FunctionComponent = () => {
     });
   };
 
-  const onSubmit = async (event: any) => {
+  const login = async (event: any) => {
     event.preventDefault();
 
     try {
@@ -49,10 +49,7 @@ export const Login: React.FunctionComponent = () => {
   return (
     <div>
       <Header />
-      <form
-        className="form-search form-search--login shadow"
-        onSubmit={onSubmit}
-      >
+      <form className="form-search form-search--login" onSubmit={login}>
         <div className="form-search__inputs form-search__inputs--login ">
           <input
             className="input-text input-text--login"

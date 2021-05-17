@@ -3,7 +3,7 @@ import { Filter } from "./Filter";
 import { Restaurants } from "./Restaurants";
 
 interface Filters {
-  location: string;
+  location: string | null;
   radius: number;
   priceRange: number;
   participants: Participant[];
@@ -11,7 +11,7 @@ interface Filters {
 
 export const Places: React.FunctionComponent = () => {
   const [search, setSearch] = React.useState<Filters>({
-    location: "50.826587,4.37309",
+    location: null,
     radius: 500,
     priceRange: 1,
     participants: [
@@ -57,12 +57,11 @@ export const Places: React.FunctionComponent = () => {
     });
   };
 
-  const onSubmit = async (event: any) => {
+  const fetchRestaurants = async (event: any) => {
     event.preventDefault();
 
     try {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/search`, {
-        // const response = await fetch(`http://localhost:8000/api/search`, {
         method: "POST",
         body: JSON.stringify(search),
         headers: {
@@ -70,7 +69,7 @@ export const Places: React.FunctionComponent = () => {
         },
       });
       const responseJSON = await response.json();
-      console.log("responseJSON", responseJSON);
+      console.debug("restaurants", responseJSON);
       setRestaurants(responseJSON);
       if (isBoxed) setIsBoxed(!isBoxed);
     } catch (error) {
@@ -84,7 +83,7 @@ export const Places: React.FunctionComponent = () => {
       <Filter
         search={search}
         handleInputChange={handleInputChange}
-        onSubmit={onSubmit}
+        fetchRestaurants={fetchRestaurants}
         updatePriceRange={updatePriceRange}
         updateCoords={updateCoords}
         updateParticipants={updateParticipants}

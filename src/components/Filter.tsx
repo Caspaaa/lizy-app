@@ -7,7 +7,7 @@ import { FilterParticipants } from "./FilterParticipants";
 interface Props {
   search: SearchInterface;
   handleInputChange: React.ChangeEventHandler;
-  onSubmit: React.FormEventHandler;
+  fetchRestaurants: React.FormEventHandler;
   updatePriceRange: Function;
   updateCoords: Function;
   updateParticipants: Function;
@@ -17,7 +17,7 @@ interface Props {
 export const Filter: React.FunctionComponent<Props> = ({
   search,
   handleInputChange,
-  onSubmit,
+  fetchRestaurants,
   updatePriceRange,
   updateCoords,
   updateParticipants,
@@ -26,7 +26,7 @@ export const Filter: React.FunctionComponent<Props> = ({
   return (
     <div>
       <Header />
-      <form className="form-search" onSubmit={onSubmit}>
+      <form className="form-search" onSubmit={fetchRestaurants}>
         <div className="form-search__inputs">
           <FilterAddress updateCoords={updateCoords} />
           <select

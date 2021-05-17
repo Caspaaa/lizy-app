@@ -50,7 +50,7 @@ interface Restaurant {
 }
 
 interface SearchInterface {
-  location: string;
+  location: string | null;
   radius: number;
   priceRange: number;
   participants: Participant[];
