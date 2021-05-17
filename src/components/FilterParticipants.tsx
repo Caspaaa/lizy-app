@@ -11,13 +11,16 @@ export const FilterParticipants: React.FunctionComponent<Props> = ({
 }) => {
   const [visible, setVisible] = React.useState(false);
 
-  const toggleParticipants = () => {
+  const [currentParticipants, setCurrentParticipants] =
+    React.useState(participants);
+
+  const toggleParticipantsBox = () => {
     setVisible(!visible);
   };
 
-  const toggleCheck = (event: any) => {
+  const toggleCheckAndSetCurrentParticipants = (event: any) => {
     const { value } = event.target;
-    const newParticipants = participants.map((participant) => {
+    const newParticipants = currentParticipants.map((participant) => {
       return {
         name: participant.name,
         isChecked:
@@ -26,20 +29,25 @@ export const FilterParticipants: React.FunctionComponent<Props> = ({
             : participant.isChecked,
       };
     });
+    setCurrentParticipants(newParticipants);
+  };
 
-    updateParticipants(newParticipants);
+  const updateParticipantsState = () => {
+    toggleParticipantsBox();
+    updateParticipants(currentParticipants);
   };
 
   return (
     <>
       <div className="participants input-text">
-        <div className="participants__title" onClick={toggleParticipants}>
+        <div className="participants__title" onClick={toggleParticipantsBox}>
           <div>Qui a faim ?</div>
-        </div> 
+        </div>
+
         <div
           className={`participants__name ${visible ? "show-participants" : ""}`}
         >
-          {participants.map((participant, index) => (
+          {currentParticipants.map((participant, index) => (
             <div key={index} className="participant">
               <input
                 className="participant__checkbox"
@@ -47,12 +55,12 @@ export const FilterParticipants: React.FunctionComponent<Props> = ({
                 name="dropdown-group"
                 value={participant.name}
                 checked={participant.isChecked}
-                onChange={toggleCheck}
+                onChange={toggleCheckAndSetCurrentParticipants}
               />
               {participant.name}
             </div>
           ))}
-          <div className="close-select" onClick={toggleParticipants}>
+          <div className="close-select" onClick={updateParticipantsState}>
             OK
           </div>
         </div>
