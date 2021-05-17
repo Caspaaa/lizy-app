@@ -24,6 +24,7 @@ export const RestaurantAddress: React.FunctionComponent<Props> = ({
       <a
         href={`https://maps.google.com?q=${name}`}
         target="_blank"
+        rel="noreferrer"
         className="restaurant-desc-item__text"
       >
         {address.map((subAddress, index) => {

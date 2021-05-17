@@ -3,7 +3,6 @@ import FilterAddress from "./FilterAddress";
 import { Header } from "./Header";
 import { PriceRange } from "./PriceRange";
 import { FilterParticipants } from "./FilterParticipants";
-import { stat } from "fs";
 
 interface Props {
   search: SearchInterface;
