@@ -6,33 +6,39 @@ import { FilterParticipants } from "./FilterParticipants";
 
 interface Props {
   search: SearchInterface;
-  handleInputChange: React.ChangeEventHandler;
-  fetchRestaurants: React.FormEventHandler;
-  updatePriceRange: Function;
+  fetchRestaurants: Function;
   updateCoords: Function;
   updateParticipants: Function;
+  updateRadius: React.ChangeEventHandler;
+  updatePriceRange: Function;
   isBoxed: boolean;
 }
 
 export const Filter: React.FunctionComponent<Props> = ({
   search,
-  handleInputChange,
   fetchRestaurants,
-  updatePriceRange,
   updateCoords,
   updateParticipants,
+  updateRadius,
+  updatePriceRange,
   isBoxed,
 }) => {
   return (
     <div>
       <Header />
-      <form className="form-search" onSubmit={fetchRestaurants}>
+      <form
+        className="form-search"
+        onSubmit={(event) => {
+          event.preventDefault();
+          fetchRestaurants();
+        }}
+      >
         <div className="form-search__inputs">
           <FilterAddress updateCoords={updateCoords} />
           <select
             className="input-text"
             placeholder="Rayon"
-            onChange={handleInputChange}
+            onChange={updateRadius}
             name="radius"
           >
             <option value="500">500 m</option>

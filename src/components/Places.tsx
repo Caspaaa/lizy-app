@@ -27,6 +27,10 @@ export const Places: React.FunctionComponent = () => {
 
   const [isBoxed, setIsBoxed] = React.useState(true);
 
+  React.useEffect(() => {
+    !isBoxed && fetchRestaurants();
+  }, [search]);
+
   const handleInputChange = (event: any) => {
     const { value, name } = event.target;
 
@@ -57,9 +61,7 @@ export const Places: React.FunctionComponent = () => {
     });
   };
 
-  const fetchRestaurants = async (event: any) => {
-    event.preventDefault();
-
+  const fetchRestaurants = async () => {
     try {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/search`, {
         method: "POST",
@@ -82,11 +84,11 @@ export const Places: React.FunctionComponent = () => {
     <div className={isBoxed ? "boxed-form" : ""}>
       <Filter
         search={search}
-        handleInputChange={handleInputChange}
         fetchRestaurants={fetchRestaurants}
-        updatePriceRange={updatePriceRange}
         updateCoords={updateCoords}
+        updateRadius={handleInputChange}
         updateParticipants={updateParticipants}
+        updatePriceRange={updatePriceRange}
         isBoxed={isBoxed}
       />
       <Restaurants restaurants={restaurants} />

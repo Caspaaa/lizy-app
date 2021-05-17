@@ -10,13 +10,13 @@ export const FilterParticipants: React.FunctionComponent<Props> = ({
   updateParticipants,
 }) => {
   const [visible, setVisible] = React.useState(false);
+
   const toggleParticipants = () => {
     setVisible(!visible);
   };
 
   const toggleCheck = (event: any) => {
     const { value } = event.target;
-    console.log(value);
     const newParticipants = participants.map((participant) => {
       return {
         name: participant.name,
@@ -26,6 +26,7 @@ export const FilterParticipants: React.FunctionComponent<Props> = ({
             : participant.isChecked,
       };
     });
+
     updateParticipants(newParticipants);
   };
 
@@ -34,8 +35,7 @@ export const FilterParticipants: React.FunctionComponent<Props> = ({
       <div className="participants input-text">
         <div className="participants__title" onClick={toggleParticipants}>
           <div>Qui a faim ?</div>
-        </div>
-
+        </div> 
         <div
           className={`participants__name ${visible ? "show-participants" : ""}`}
         >
