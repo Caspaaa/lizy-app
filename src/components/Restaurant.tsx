@@ -4,12 +4,17 @@ import { RestaurantPhone } from "./RestaurantPhone";
 import { RestaurantExtras } from "./RestaurantExtras";
 import restaurantIcon from "../assets/images/restaurant-icon.png";
 import cuisineIcon from "../assets/images/cuisine-icon.png";
+import noImageRestaurant from "../assets/images/bg-no-img.png";
 
 interface Props {
   place: any;
 }
 
 export const Restaurant: React.FunctionComponent<Props> = ({ place }) => {
+  const truncate = (string: string, size: number) => {
+    return string.length > size ? string.slice(0, size - 1) + "..." : string;
+  };
+
   return (
     <div className="restaurant">
       <div className="restaurant__head">
@@ -21,10 +26,16 @@ export const Restaurant: React.FunctionComponent<Props> = ({ place }) => {
               alt={place.name}
             />
           </div>
-          <div className="restaurant-name__text">{place.name}</div>
+          <div className="restaurant-name__text">
+            {truncate(place.name, 20)}
+          </div>
         </div>
         <div className="restaurant-img-wrapper">
-          <img className="restaurant-img" src={place.image} alt={place.name} />
+          <img
+            className="restaurant-img"
+            src={place.image || noImageRestaurant}
+            alt={place.name}
+          />
         </div>
       </div>
 

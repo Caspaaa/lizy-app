@@ -60,7 +60,11 @@ export const FilterParticipants: React.FunctionComponent<Props> = ({
               {participant.name}
             </div>
           ))}
-          <div className="close-select" onClick={updateParticipantsState}>
+          <div
+            data-testid="updateParticipantsState"
+            className="close-select"
+            onClick={updateParticipantsState}
+          >
             OK
           </div>
         </div>

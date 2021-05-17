@@ -493,8 +493,7 @@ body .boxed-form .css-26l3qy-menu {
   width: calc(100% - 20px);
 }
 
-body .css-1pahdxg-control:hover,
-body .css-yk16xz-control:hover {
+body .unfilled .css-yk16xz-control {
   border-color: #ff006e;
 }
 
@@ -518,6 +517,10 @@ body .boxed-form .css-26l3qy-menu {
 
   .restaurant {
     width: calc(33.33% - 20px);
+  }
+
+  .restaurant-name__text {
+    font-size: 1em;
   }
 
   /* --- FILTERS --- */
