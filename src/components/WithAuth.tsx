@@ -9,7 +9,6 @@ export const WithAuth: React.FunctionComponent = (props: any) => {
 
   React.useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/authenticate`, {
-      // fetch(`http://localhost:8000/api/authenticate`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },

@@ -612,6 +612,17 @@ body .boxed-form .css-26l3qy-menu {
     height: 100px;
   }
 
+  .form-search {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  select.input-text,
+  .participants.input-text {
+    margin: 10px 20px;
+    width: 100%;
+  }
+
   /* --- BOXED --- */
 
   body .boxed-form .form-search {
