@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useHistory } from "react-router-dom";
-import { Header } from "./Header";
+import { Header } from "../Header";
 
 export const Login: React.FunctionComponent = () => {
   let history = useHistory();

@@ -2,8 +2,8 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Places } from "./components/Places";
-import { Login } from "./components/Login";
-import { WithAuth } from "./components/WithAuth";
+import { Login } from "./components/authentication/Login";
+import { WithAuth } from "./components/authentication/WithAuth";
 
 function App() {
   return (

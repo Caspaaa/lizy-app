@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Filter } from "./Filter";
-import { Restaurants } from "./Restaurants";
+import { Filter } from "./filters/Filter";
+import { Restaurants } from "./restaurants/Restaurants";
 
 interface Filters {
   location: string | null;
