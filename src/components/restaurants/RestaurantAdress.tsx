@@ -1,5 +1,5 @@
 import * as React from "react";
-import addressIcon from "../assets/images/location-icon.png";
+import addressIcon from "../../assets/images/location-icon.png";
 
 interface Props {
   address: string[];

@@ -2,9 +2,9 @@ import * as React from "react";
 import { RestaurantAddress } from "./RestaurantAdress";
 import { RestaurantPhone } from "./RestaurantPhone";
 import { RestaurantExtras } from "./RestaurantExtras";
-import restaurantIcon from "../assets/images/restaurant-icon.png";
-import cuisineIcon from "../assets/images/cuisine-icon.png";
-import noImageRestaurant from "../assets/images/bg-no-img.png";
+import restaurantIcon from "../../assets/images/restaurant-icon.png";
+import cuisineIcon from "../../assets/images/cuisine-icon.png";
+import noImageRestaurant from "../../assets/images/bg-no-img.png";
 
 interface Props {
   place: any;

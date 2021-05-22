@@ -1,5 +1,5 @@
 import * as React from "react";
-import phoneIcon from "../assets/images/phone-icon.png";
+import phoneIcon from "../../assets/images/phone-icon.png";
 
 interface Props {
   phone: string;
