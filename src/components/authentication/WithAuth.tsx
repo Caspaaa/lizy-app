@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
+import { authenticate } from "../../services/loginService";
 
 export const WithAuth: React.FunctionComponent = (props: any) => {
   const [state, setState] = React.useState({
@@ -8,20 +9,18 @@ export const WithAuth: React.FunctionComponent = (props: any) => {
   });
 
   React.useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/authenticate`, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-      },
-    }).then((response) => {
-      const status = response.status;
-      if (status !== 200) {
+    (async () => {
+      const isAuthenticated = await authenticate();
+
+      if (!isAuthenticated) {
         setState({ loading: false, redirect: true });
 
         return;
       }
 
       setState({ ...state, loading: false });
-    });
+    })();
+
     // eslint-disable-next-line
   }, []);
 

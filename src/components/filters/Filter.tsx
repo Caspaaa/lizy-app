@@ -1,7 +1,7 @@
 import * as React from "react";
 import FilterAddress from "./FilterAddress";
-import { Header } from "./Header";
-import { PriceRange } from "./PriceRange";
+import { Header } from "../Header";
+import { PriceRange } from "../restaurants/PriceRange";
 import { FilterParticipants } from "./FilterParticipants";
 
 interface Props {

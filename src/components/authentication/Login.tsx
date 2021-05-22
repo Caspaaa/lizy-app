@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useHistory } from "react-router-dom";
 import { Header } from "../Header";
+import { getToken } from "../../services/loginService";
 
 export const Login: React.FunctionComponent = () => {
   let history = useHistory();
@@ -23,21 +24,9 @@ export const Login: React.FunctionComponent = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/getToken`,
-        // `http://localhost:8000/api/getToken`,
-        {
-          method: "POST",
-          body: JSON.stringify(user),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const token = await getToken(user);
 
-      const responseJSON = await response.json();
-
-      localStorage.setItem("token", responseJSON.token);
+      localStorage.setItem("token", token);
 
       history.push("/places");
     } catch (error) {

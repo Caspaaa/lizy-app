@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Filter } from "./filters/Filter";
 import { Restaurants } from "./restaurants/Restaurants";
+import { fetchRestaurants } from "../services/restaurantsService";
 
 interface Filters {
   location: string | null;
@@ -28,7 +29,7 @@ export const Places: React.FunctionComponent = () => {
   const [isBoxed, setIsBoxed] = React.useState(true);
 
   React.useEffect(() => {
-    !isBoxed && fetchRestaurants();
+    !isBoxed && loadRestaurants();
     // eslint-disable-next-line
   }, [search]);
 
@@ -62,18 +63,11 @@ export const Places: React.FunctionComponent = () => {
     });
   };
 
-  const fetchRestaurants = async () => {
+  const loadRestaurants = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/search`, {
-        method: "POST",
-        body: JSON.stringify(search),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const responseJSON = await response.json();
-      console.debug("restaurants", responseJSON);
-      setRestaurants(responseJSON);
+      const restaurants = await fetchRestaurants(search);
+ 
+      setRestaurants(restaurants);
       if (isBoxed) setIsBoxed(!isBoxed);
     } catch (error) {
       console.error(error);
@@ -85,7 +79,7 @@ export const Places: React.FunctionComponent = () => {
     <div className={isBoxed ? "boxed-form" : ""}>
       <Filter
         search={search}
-        fetchRestaurants={fetchRestaurants}
+        fetchRestaurants={loadRestaurants}
         updateCoords={updateCoords}
         updateRadius={handleInputChange}
         updateParticipants={updateParticipants}
