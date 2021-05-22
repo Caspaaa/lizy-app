@@ -6,6 +6,6 @@ export const fetchRestaurants = async (search: any) => {
       "Content-Type": "application/json",
     },
   });
-  console.debug("restaurants", response.json());
+
   return response.json();
 };
